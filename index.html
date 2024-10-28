@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a Letter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffc0cb; /* Soft pink background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            max-width: 600px;
+            background-color: #fffaf0; /* Light ivory color for the paper effect */
+            padding: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            border: 1px solid #d4af37; /* Slight golden border for a classic touch */
+        }
+        textarea {
+            width: 100%;
+            height: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #d4af37;
+            border-radius: 4px;
+            resize: none;
+            background-color: #fffaf0; /* Matching the paper background */
+            line-height: 1.5;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff69b4; /* Pink button to match the theme */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff1493; /* Darker pink on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Write Your Letter</h2>
+        <textarea id="letterContent">
+Hi Mics,
+
+Alam mo, sobra kita naa-appreciate sa mga small things na ginagawa mo—the things na nag-eeffort ka matuto. Yung small things na ginagawa mo make you cute talaga. Higit sa lahat, yung pagmamahal mo sa family lalo na si ate mo—the way na iniintindi mo siya at gusto mong magtrabaho para makatulong. I admire that character in you.
+
+Also, yung pagiging madasalin mo reminds me of my mom. Every time na nagvivisit tayo sa simbahan, naaalala ko siya. Every Friday, andun kami to pray.
+
+Kaya nung binigay ko yung flowers kanina, gusto ko lang sabihin na I like you for a long time na. Siguro alam mo na dahil nahahalata mo na rin. Ano man nararamdaman mo, platonic or as a friend, just let me express my admiration for you.
+
+        </textarea>
+        <button onclick="saveLetter()">Save Letter</button>
+    </div>
+
+    <script>
+        function saveLetter() {
+            const content = document.getElementById('letterContent').value;
+            if(content) {
+                alert("Your letter has been saved!");
+                console.log("Letter content:", content); // For demonstration, you can log or use this data further
+            } else {
+                alert("Please write something before saving.");
+            }
+        }
+    </script>
+</body>
+</html>
